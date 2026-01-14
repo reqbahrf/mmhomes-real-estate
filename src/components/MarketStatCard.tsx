@@ -5,7 +5,7 @@ type MarketStatCardProps = {
   icon: ReactNode;
   title: string;
   value: string;
-  description: ReactNode;
+  description: string;
 };
 
 export default function MarketStatCard({
@@ -26,17 +26,18 @@ export default function MarketStatCard({
       </div>
 
       {/* Content */}
-      <h4 className='text-sm font-medium text-gray-600 dark:text-gray-400'>
+      <h4 className='text-md font-bold text-gray-600 dark:text-gray-400'>
         {title}
       </h4>
 
-      <div className='mt-1 text-2xl font-bold text-blue-600 dark:text-blue-400'>
+      <div className='mt-1 text-3xl font-bold text-blue-600 dark:text-blue-400'>
         {value}
       </div>
 
-      <div className='mt-1 text-sm text-gray-500 dark:text-gray-400'>
-        {description}
-      </div>
+      <div
+        className='mt-1 text-sm text-gray-500 dark:text-gray-400'
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
     </motion.div>
   );
 }
