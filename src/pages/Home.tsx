@@ -4,6 +4,7 @@ import {
   RiSearchLine,
   RiExchangeLine,
   RiBarChart2Line,
+  RiArrowRightLine,
 } from '@remixicon/react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import profile from '@/assets/profile.webp';
@@ -12,10 +13,12 @@ import equal_housing from '@/assets/compliance/equal_housing.png';
 import realtor from '@/assets/compliance/realtor.jpg';
 import pahrump from '@/assets/compliance/pahrump.jpg';
 import featured_property from '@/assets/house3.jpg';
+import PropertyCard from '@/components/PropertyCard';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { testimonialDummy } from '@/data/testimonialDummy';
 import { servicesDummy } from '@/data/servicesDummy';
+import { propertiesDummy } from '@/data/propertiesDummy';
 
 const iconMap = {
   RiSearchLine: <RiSearchLine />,
@@ -112,7 +115,26 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id='properties' className='bg-gray-50'></section>
+      <section id='properties' className='bg-gray-50'>
+        <div className='mx-auto max-w-7xl px-6 pt-12'>
+          <h2 className='mb-4 text-3xl font-bold text-gray-900'>
+            Exclusive Collections
+          </h2>
+          <div className='mb-8 flex justify-between'>
+            <p className='w-full text-gray-600 md:w-1/2'>
+              Discover our most prestigious properties available now.
+            </p>
+            <button className='flex items-center gap-2 rounded-lg text-blue-600 hover:text-blue-700'>
+              View All listings <RiArrowRightLine size={20} />
+            </button>
+          </div>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
+            {propertiesDummy.map((property, index) => (
+              <PropertyCard key={index} {...property} />
+            ))}
+          </div>
+        </div>
+      </section>
       <section id='market-stats' className='bg-gray-50'></section>
       <section id='compliance-and-memberships' className='bg-gray-50 py-16'>
         <div className='mx-auto max-w-7xl px-6'>
