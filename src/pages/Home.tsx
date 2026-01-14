@@ -288,7 +288,7 @@ export default function Home() {
       >
         <div className='mx-auto max-w-[1440px]'>
           <div className='mb-16 text-center'>
-            <span className='text-primary mb-2 block text-sm font-bold tracking-widest uppercase'>
+            <span className='text-primary mb-2 block text-sm font-bold tracking-widest text-gray-500 uppercase dark:text-gray-300'>
               Data Driven
             </span>
             <h2 className='mb-4 text-3xl font-black text-[#111418] lg:text-4xl dark:text-white'>
