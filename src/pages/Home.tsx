@@ -14,11 +14,11 @@ import { lazy, Suspense } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import LoadingSkeleton from '@/components/common/LoadingSkeleton';
 import profile from '@/assets/profile.webp';
-import the_ridge from '@/assets/compliance/the_ridge.png';
-import equal_housing from '@/assets/compliance/equal_housing.png';
-import realtor from '@/assets/compliance/realtor.jpg';
-import pahrump from '@/assets/compliance/pahrump.jpg';
-import featured_property from '@/assets/house3.jpg';
+import the_ridge from '@/assets/compliance/the_ridge.webp';
+import equal_housing from '@/assets/compliance/equal_housing.webp';
+import realtor from '@/assets/compliance/realtor.webp';
+import pahrump from '@/assets/compliance/pahrump.webp';
+import featured_property from '@/assets/house3.webp';
 const PropertyCard = lazy(() => import('@/components/PropertyCard'));
 import ServiceCard from '@/components/ServiceCard';
 const TestimonialSection = lazy(

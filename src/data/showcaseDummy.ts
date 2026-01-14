@@ -1,6 +1,6 @@
-import top_residential from '@/assets/top_residential_sales_last_5_years.jpg';
-import dont_just_list from '@/assets/house3.jpg';
-import guide_to_buyers from '@/assets/guide_to_buyer.jpg';
+import top_residential from '@/assets/top_residential_sales_last_5_years.webp';
+import dont_just_list from '@/assets/house3.webp';
+import guide_to_buyers from '@/assets/guide_to_buyer.webp';
 
 export const showcaseDummy = [
   {

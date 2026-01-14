@@ -1,9 +1,9 @@
-import avatar3 from '@/assets/customers/avatar3.jpg';
-import avatar2 from '@/assets/customers/avatar2.jpg';
-import avatar1 from '@/assets/customers/avatar1.jpg';
-import avatar4 from '@/assets/customers/avatar4.jpg';
-import avatar5 from '@/assets/customers/avatar5.jpg';
-import avatar6 from '@/assets/customers/avatar6.jpg';
+import avatar3 from '@/assets/customers/avatar3.webp';
+import avatar2 from '@/assets/customers/avatar2.webp';
+import avatar1 from '@/assets/customers/avatar1.webp';
+import avatar4 from '@/assets/customers/avatar4.webp';
+import avatar5 from '@/assets/customers/avatar5.webp';
+import avatar6 from '@/assets/customers/avatar6.webp';
 
 export const testimonialDummy = [
   {

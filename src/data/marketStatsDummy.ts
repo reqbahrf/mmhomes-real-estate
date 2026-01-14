@@ -3,7 +3,6 @@ export type MarketStatCardProps = {
   title: string;
   value: string;
   description: string;
-  trend?: 'up' | 'down' | 'neutral';
 };
 
 export const marketStatsDummy: MarketStatCardProps[] = [

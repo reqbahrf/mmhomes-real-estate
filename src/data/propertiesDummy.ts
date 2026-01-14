@@ -10,9 +10,9 @@ export type PropertyCardProps = {
   size: string;
 };
 
-import house1 from '@/assets/house1.jpg';
-import house2 from '@/assets/house2.jpg';
-import house3 from '@/assets/house3.jpg';
+import house1 from '@/assets/house1.webp';
+import house2 from '@/assets/house2.webp';
+import house3 from '@/assets/house3.webp';
 
 export const propertiesDummy: PropertyCardProps[] = [
   {
