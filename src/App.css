@@ -8,7 +8,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #102215;
+    --background: #101828;
     --foreground: #ededed;
   }
 }
@@ -17,4 +17,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+span.lazy-load-image-background:has(.w-full) {
+  min-width: 100% !important;
 }
