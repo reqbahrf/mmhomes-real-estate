@@ -5,6 +5,10 @@ import {
   RiExchangeLine,
   RiBarChart2Line,
   RiArrowRightLine,
+  RiHomeLine,
+  RiTimerLine,
+  RiSpeedLine,
+  RiDownloadLine,
 } from '@remixicon/react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import profile from '@/assets/profile.webp';
@@ -16,14 +20,22 @@ import featured_property from '@/assets/house3.jpg';
 import PropertyCard from '@/components/PropertyCard';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
+import MarketStatCard from '@/components/MarketStatCard';
 import { testimonialDummy } from '@/data/testimonialDummy';
 import { servicesDummy } from '@/data/servicesDummy';
 import { propertiesDummy } from '@/data/propertiesDummy';
+import { marketStatsDummy } from '@/data/marketStatsDummy';
 
-const iconMap = {
+const serviceIconMap = {
   RiSearchLine: <RiSearchLine />,
   RiExchangeLine: <RiExchangeLine />,
   RiBarChart2Line: <RiBarChart2Line />,
+};
+
+const marketIconMap = {
+  RiHomeLine: <RiHomeLine />,
+  RiTimerLine: <RiTimerLine />,
+  RiSpeedLine: <RiSpeedLine />,
 };
 
 export default function Home() {
@@ -135,7 +147,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id='market-stats' className='bg-gray-50'></section>
       <section id='compliance-and-memberships' className='bg-gray-50 py-16'>
         <div className='mx-auto max-w-7xl px-6'>
           <div className='mb-12 text-center'>
@@ -198,7 +209,11 @@ export default function Home() {
             {servicesDummy.map((service, index) => (
               <ServiceCard
                 key={index}
-                icon={iconMap[service.iconName as keyof typeof iconMap]}
+                icon={
+                  serviceIconMap[
+                    service.iconName as keyof typeof serviceIconMap
+                  ]
+                }
                 title={service.title}
                 description={service.description}
               />
@@ -232,6 +247,45 @@ export default function Home() {
                 avatar={testimonial.avatar}
               />
             ))}
+          </div>
+        </div>
+      </section>
+      <section
+        id='market-stats'
+        className='bg-gray-50 px-6 py-24 lg:px-40 dark:bg-gray-900'
+      >
+        <div className='mx-auto max-w-[1440px]'>
+          <div className='mb-16 text-center'>
+            <span className='text-primary mb-2 block text-sm font-bold tracking-widest uppercase'>
+              Data Driven
+            </span>
+            <h2 className='mb-4 text-3xl font-black text-[#111418] lg:text-4xl dark:text-white'>
+              Local Market Pulse
+            </h2>
+            <p className='mx-auto max-w-2xl text-gray-600 dark:text-gray-300'>
+              Stay informed with real-time trends and data from your local
+              luxury real estate market. We provide the insights you need to
+              make confident decisions.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
+            {marketStatsDummy.map((stat, index) => (
+              <MarketStatCard
+                key={index}
+                icon={
+                  marketIconMap[stat.iconName as keyof typeof marketIconMap]
+                }
+                title={stat.title}
+                value={stat.value}
+                description={stat.description}
+              />
+            ))}
+          </div>
+          <div className='mt-12 text-center'>
+            <button className='border-primary hover:text-primary inline-flex cursor-pointer items-center gap-2 border-b-2 border-b-blue-500 pb-1 text-xs font-semibold text-[#111418] transition-colors md:text-sm dark:text-white'>
+              Download full market report
+              <RiDownloadLine className='text-xs' />
+            </button>
           </div>
         </div>
       </section>
